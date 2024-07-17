@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+ul, li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+body{
+    background-color: #fff;
+    color: #333333;
+}
+
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 해더 영역 */
+
+#header{
+    height: 100px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding-left: 20px;
+}
+
+.nav{}
+
+.main{
+    padding-right: 30px;
+}
+.main>li{
+    display: inline-block;
+    position: relative;
+}
+.main>li>a{
+    display: block;
+    width: 180px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+    line-height: 50px;
+    font-size: 16px;
+    background-color: rgb(104, 67, 238);
+    color: white;
+}
+.main>li:hover>a{
+    background-color: rgb(25, 0, 94);
+    color: white;
+}
+
+.sub{
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    display: none;
+    z-index: 10;
+}
+
+.sub li{}
+.sub li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: white;
+}
+.sub li a:hover{
+    background-color: rgb(74, 64, 121);
+    color: rgb(255, 255, 255);
+}
+
+.sub li:last-child a{
+    border-radius: 0 0 10px 10px;
+}
+
+/* 슬라이드 이미지 영역 */
+
+#slide_img{
+    height: 300px;
+    /* background-color: orange; */
+    position: relative;
+}
+
+.fade{}
+.fade li{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.fade li a{}
+.fade li a img{}
+
+/* 콘텐츠 영역 */
+
+#contents{
+    height: 200px;
+    /* background-color: orangered; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#contents>div{
+    height: 200px;
+    width: 390px;
+    /* background-color: yellowgreen; */
+}
+
+#contents h2{
+    font-size: 14px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border: 1px solid black;
+    border-radius: 10px 10px 0 0;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#contents p{
+    width: 100%;
+    height: calc(200px - 35px);
+    border-top: 3px solid black;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contents p img{
+    filter: sepia();
+    transition: all 0.3s;
+}
+
+#contents p img:hover{
+    filter: none;
+}
+
+.cont1{
+    position: relative;
+}
+
+.cont1 h2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.cont1 ul{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 100%;
+    height: calc(200px - 35px);
+    border-top: 3px solid black;
+}
+
+.cont1 h2.b_on{
+    background-color: #ddd !important;
+}
+
+.notice{}
+.notice ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* padding: 0 10px; */
+}
+.notice ul li{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px dotted gray;
+}
+.notice ul li a{
+    width: 75%;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+.notice ul li span{
+    /* width: 25%; */
+    font-size: 14px;
+}
+
+.gallery{
+}
+.gallery h2{
+    left: 100px;
+}
+.gallery ul{
+    /* display: flex; */
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+.gallery ul li{}
+.gallery ul li a{}
+.gallery ul li a img{}
+/* 푸터 영역 */
+
+#footer{
+    height: 100px;
+    /* background-color: yellow; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.f_logo{
+    width: 200px;
+    /* height: 100%; */
+    padding-left: 20px;
+}
+
+.f_right{
+    width: 1000px;
+}
+
+.f_right>div{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.f_up{}
+.f_up a{
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid gray;
+    line-height: 1;
+}
+
+.f_up a:last-child{
+    border-right: none;
+}
+.f_up a:hover{
+    text-decoration: underline;
+}
+
+.copy{}
+
+.pop{
+    width: 500px;
+    height: 300px;
+    border-radius: 20px;
+    background-color: white;
+    border: 2px solid black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    z-index: 20;
+    display: none;
+}
+
+.pop h3{
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.pop p{
+    text-align: justify;
+    word-spacing: 1px;
+}
+.close{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    padding: 5px 10px;
+}
